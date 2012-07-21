@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  start_time: 2012-07-20 20:05:51
+  end_time: 2012-07-20 20:05:51
+  description: MyText
+  link: MyString
+  picture_link: MyString
+  key: MyString
+  key_type: MyString
+  venue_id: 1
+  published: false
+
+two:
+  name: MyString
+  start_time: 2012-07-20 20:05:51
+  end_time: 2012-07-20 20:05:51
+  description: MyText
+  link: MyString
+  picture_link: MyString
+  key: MyString
+  key_type: MyString
+  venue_id: 1
+  published: false

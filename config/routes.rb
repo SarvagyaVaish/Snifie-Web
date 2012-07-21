@@ -1,4 +1,10 @@
 SnifieWeb::Application.routes.draw do
+  resources :categories
+
+  resources :venues
+
+  resources :events
+
   get "home/index"
 
   # The priority is based upon order of creation:

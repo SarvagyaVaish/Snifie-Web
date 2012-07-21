@@ -1,6 +1,6 @@
-class CreateCategoriesEvents < ActiveRecord::Migration
+class CreateEventCategories < ActiveRecord::Migration
   def change
-    create_table :categories_events do |t|
+    create_table :event_categories do |t|
       t.integer :event_id
       t.integer :category_id
 

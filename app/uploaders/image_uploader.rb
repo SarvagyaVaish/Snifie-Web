@@ -3,7 +3,7 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+  include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
@@ -11,7 +11,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::IsolatedHelper
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  storage :fog
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -36,9 +36,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process :resize_to_fill => [500, 500]
-  # end
+  version :thumb do
+    process :resize_to_fill => [500, 500]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

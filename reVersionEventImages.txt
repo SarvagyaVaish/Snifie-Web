@@ -1,0 +1,11 @@
+Event.all.each do |ym| 
+  begin
+    ym.image.cache_stored_file! 
+    ym.image.retrieve_from_cache!(ym.image.cache_name) 
+    ym.image.recreate_versions! 
+    ym.save! 
+  rescue => e
+    puts  "ERROR: #{CLASS}: #{object.id} -> #{e.to_s}"
+  end
+end
+

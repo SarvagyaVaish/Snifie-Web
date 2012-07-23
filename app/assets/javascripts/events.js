@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	alert("hi");
         $(".dotify").dotdotdot({
                 /*      The HTML to add as ellipsis. */
                 ellipsis                : '... ',
@@ -11,7 +10,7 @@ $(document).ready(function() {
                 after                   : null,
 
                 /*      Whether to update the ellipsis: true/'window' */
-                watch                   : false,
+                watch                   : true,
         
                 /*      Optionally set a max-height, if null, the height will be measured. */
                 height                  : 20,

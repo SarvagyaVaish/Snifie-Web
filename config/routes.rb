@@ -3,7 +3,11 @@ SnifieWeb::Application.routes.draw do
 
   resources :venues
 
-  resources :events
+  resources :events do
+    collection do
+      get 'grid'
+    end
+  end
 
   get "home/index"
 

@@ -32,7 +32,7 @@
   <div class="control-group">
     <%= f.label :category_name, :class => 'control-label' %>
     <div class="controls">
-      <%= collection_select(:category, :id, Category.top_level_categories, :id, :name, {}, {:class => 'text-area'}) %>
+      <%= collection_select(:category, :name, Category.top_level_categories, :name, :name, {:selected => @event.categories.first.name}, {:class => 'text-area'}) %>
     </div>
   </div>
   <div class="control-group">

@@ -53,7 +53,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(params[:event])
-    @event.categories << Category.find(params[:category][:id])
+    @event.categories << Category.find_by_name(params[:category][:name])
 
     respond_to do |format|
       if @event.save
@@ -70,7 +70,8 @@ class EventsController < ApplicationController
   # PUT /events/1.json
   def update
     @event = Event.find(params[:id])
-    @event.categories << Category.find(params[:category][:id])
+    @event.categories.clear
+    @event.categories << Category.find_by_name(params[:category][:name])
 
     respond_to do |format|
       if @event.update_attributes(params[:event])

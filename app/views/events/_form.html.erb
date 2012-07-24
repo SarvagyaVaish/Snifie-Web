@@ -32,7 +32,12 @@
   <div class="control-group">
     <%= f.label :category_name, :class => 'control-label' %>
     <div class="controls">
-      <%= collection_select(:category, :name, Category.top_level_categories, :name, :name, {:selected => @event.categories.first.name}, {:class => 'text-area'}) %>
+      <% if !@event.categories.empty?
+            selected_category = @event.categories.first.name
+         else
+            selected_category = ""
+         end %>
+      <%= collection_select(:category, :name, Category.top_level_categories, :name, :name, {:selected => selected_category}, {:class => 'text-area'}) %>
     </div>
   </div>
   <div class="control-group">

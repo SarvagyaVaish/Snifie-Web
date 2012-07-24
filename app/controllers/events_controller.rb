@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     @events = Event.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # grid.html.erb
       format.json { render json: @events }
     end
   end
@@ -16,7 +16,7 @@ class EventsController < ApplicationController
     @events = Event.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { redirect_to :action => 'grid' }
       format.json { render json: @events }
     end
   end

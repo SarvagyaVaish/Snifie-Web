@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721054738) do
+ActiveRecord::Schema.define(:version => 20120724034246) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -32,13 +32,12 @@ ActiveRecord::Schema.define(:version => 20120721054738) do
     t.datetime "end_time"
     t.text     "description"
     t.string   "link"
-    t.string   "picture_link"
     t.string   "key"
     t.string   "key_type"
     t.integer  "venue_id"
     t.boolean  "published"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "image"
   end
 

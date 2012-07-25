@@ -1,3 +1,37 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+	.title {
+		font-size: 500%;
+		line-height: 1;
+	}
+	.sub-title {
+		font-size:120%
+	}
+	.call-to-action {
+		margin-top: 50px;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.jumbotron {
+		margin-top: 0px;
+	}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) {
+	.jumbotron {
+		margin-top: 100px;
+	}
+}
+

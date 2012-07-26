@@ -61,20 +61,7 @@
     <div class="container">
       <div class="content">
         <div class="row">
-          <div class="span3">
-            <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
-              <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
-              </ul>
-            </div><!--/.well -->
-          </div><!--/span-->
-          <div class="span9">
-            <%= yield %>
-          </div>
+          <%= yield %>
         </div><!--/row-->
       </div><!--/content-->
 
@@ -93,12 +80,12 @@
     <!-- USER VOICE WIDGET -->
     <script type="text/javascript">
       var uvOptions = {};
-      (function() {
-         var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-         uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/IJFbvJaqVFPW8yVzPOiXQ.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-      })();
-    </script>
+(function() {
+ var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+ uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/IJFbvJaqVFPW8yVzPOiXQ.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+ })();
+</script>
 
 
   </body>

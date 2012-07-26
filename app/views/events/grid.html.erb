@@ -1,22 +1,39 @@
+<div class="span3">
 
-<ul class="thumbnails">
-  <% @events.each do |event| %>
+  <div class="well sidebar-nav">
+    <h3>Sidebar</h3>
+    <ul class="nav nav-list">
+      <li class="nav-header">Sidebar</li>
+      <li><%= link_to "All Categories", "#", :id => "all-filter", :class => "filter-btn" %></li>
+      <li><%= link_to "Entertainment", "#", :id => "entertainment-filter", :class => "filter-btn" %></li>
+      <li><%= link_to "Professional", "#", :id => "professional-filter", :class => "filter-btn" %></li>
+      <li><%= link_to "Outdoors", "#", :id => "outdoors-filter", :class => "filter-btn" %></li>
+      <li><%= link_to "Self Improvement", "#", :id => "self-improvement-filter", :class => "filter-btn" %></li>
+    </ul>
+  </div>
 
-    <li class="span3">
-    <%= link_to(event_path(event)) do %>
+</div>
+<div class="span9">
 
-      <div class="thumbnail <%= event.categories.first.name.gsub(/ /, '').underscore.dasherize %>">
-        <%= image_tag event.image_url(:thumb).to_s %>
-        <div class="caption">
-          <h4 class="dotify"><%= event.name %></h4>
-          <h6 class="dotify"><%= event.start_time.strftime('%a, %d @ %I:%M %p') %></h6>
+  <ul class="thumbnails">
+    <% @events.each do |event| %>
+      <% eventCategory = event.categories.first.name.gsub(/ /, '').underscore.dasherize %>
+
+      <li class="span3 <%=eventCategory%>-span all-span">
+      <%= link_to(event_path(event)) do %>
+
+        <div class="thumbnail <%= eventCategory %>">
+          <%= image_tag event.image_url(:thumb).to_s %>
+          <div class="caption">
+            <h4 class="dotify"><%= event.name %></h4>
+            <h6 class="dotify"><%= event.start_time.strftime('%a, %d @ %I:%M %p') %></h6>
+          </div>
         </div>
-      </div>
+
+      <% end %>
+      </li>
 
     <% end %>
-    </li>
+  </ul>
 
-  <% end %>
-</ul>
-
-
+</div>

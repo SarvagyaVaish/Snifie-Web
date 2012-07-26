@@ -4,17 +4,19 @@
 
 .jumbotron {
 	font-family: 'Karla', sans-serif;
-	text-align: center;
-        color: white;
+	color: white;
 	.title {
 		font-size: 700%;
 		line-height: 1;
+		text-align: center;
 	}
 	.sub-title {
-		font-size:120%
+		font-size:120%;
+		text-align: center;
 	}
 	.call-to-action {
 		margin-top: 50px;
+		text-align: center;
 	}
 }
 
@@ -24,7 +26,7 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-	.jumbotron {
+	.centrify{
 		margin-top: 0px;
 	}
 }
@@ -34,7 +36,7 @@
 	.home-image {
 		background: url('atlanta2.jpg') no-repeat fixed 0 -300px #000000;
 	}
-	.jumbotron {
+	.centrify{
 		margin-top: 170px;
 		margin-bottom: 200px;
 	}

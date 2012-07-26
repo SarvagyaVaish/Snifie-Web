@@ -1,6 +1,7 @@
 @import "twitter/bootstrap/bootstrap";
 body {
-  padding-top: 60px;
+  padding-top: 20px;
+  background-image:url('px_by_Gre3g.png');
 }
 @import "twitter/bootstrap/responsive";
 
@@ -30,3 +31,49 @@ body {
 // Example:
 // @linkColor: #ff0000;
 
+.thumbnail {
+  border:0px solid #DDDDDD;
+  border-radius: 4px 4px 4px 4px;
+  display: block;
+  line-height: 1;
+  padding: 0px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  .caption h6{
+    color: rgb(50,50,50);
+  }
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+@bkcolor1: rgb(206,37,61);
+@bkcolor2: rgb(158,182,62);
+@bkcolor3: rgb(135,193,220);
+@bkcolor4: rgb(242,242,82);
+
+.thumbnail.self-improvement, .thumbnail.self-improvement:hover {
+  .caption {
+    background-color: @bkcolor1;
+  }
+}
+
+.thumbnail.professional{
+  .caption {
+    background-color:  @bkcolor2;
+  }
+}
+
+.thumbnail.entertainment{
+  .caption {
+    background-color:  @bkcolor3;
+  }
+}
+
+.thumbnail.outdoors{
+  .caption {
+    background-color:  @bkcolor4;
+  }
+}

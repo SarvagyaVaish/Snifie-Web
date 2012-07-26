@@ -5,6 +5,7 @@
 .jumbotron {
 	font-family: 'Karla', sans-serif;
 	text-align: center;
+        color: white;
 	.title {
 		font-size: 500%;
 		line-height: 1;
@@ -31,7 +32,7 @@
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) {
 	.jumbotron {
-		margin-top: 100px;
+		margin-top: 170px;
 	}
 }
 

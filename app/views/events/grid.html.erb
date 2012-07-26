@@ -5,10 +5,10 @@
     <li class="span3">
     <%= link_to(event_path(event)) do %>
 
-      <div class="thumbnail">
+      <div class="thumbnail <%= event.categories.first.name.gsub(/ /, '').underscore.dasherize %>">
         <%= image_tag event.image_url(:thumb).to_s %>
         <div class="caption">
-          <h5 class="dotify"><%= event.name %></h5>
+          <h4 class="dotify"><%= event.name %></h4>
           <h6 class="dotify"><%= event.start_time.strftime('%a, %d @ %I:%M %p') %></h6>
         </div>
       </div>

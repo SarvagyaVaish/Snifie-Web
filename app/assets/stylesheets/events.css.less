@@ -28,7 +28,7 @@
 		line-height: 1;
 		padding: 0px;
 		text-align: center;
-		.caption h6{
+		.caption h6 {
 			color: rgb(80,80,80);
 		}
 	}
@@ -42,17 +42,32 @@
 	@bkcolor3: rgba(0, 0, 0, 0.7);
 	@bkcolor4: rgba(0, 0, 0, 0.7);
 
-	@textcolor1: rgb(206,37,61);      // red
-	@textcolor2: rgb(158,182,62);     // green
-	@textcolor3: rgb(135,193,220);    // blue
-	@textcolor4: rgb(242,242,82);     // yellow
+	@self-improvement: #FF0000;
+	@professional: #FFD300;
+	@entertainment: #00CC00;
+	@outdoors: #0088CC;
+
+	#all-filter { background-color: none; color: white; }
+	#entertainment-filter { background-color: none; color: @entertainment; }
+	#professional-filter { background-color: none; color: @professional; }
+	#outdoors-filter { background-color: none; color: @outdoors; }
+	#self-improvement-filter { background-color: none; color: @self-improvement; }
+
+	.active #all-filter { background-color: black; color: white; }
+	.active #entertainment-filter { background-color: @entertainment; color: black; }
+	.active #professional-filter { background-color: @professional; color: black; }
+	.active #outdoors-filter { background-color: @outdoors; color: black; }
+	.active #self-improvement-filter { background-color: @self-improvement; color: black; }
 
 	.thumbnail.self-improvement, .thumbnail.self-improvement:hover {
 		.caption {
 			background-color: @bkcolor1;
 			h4 {
-				color: @textcolor1;
+				color: @self-improvement;
 			}
+		}
+		.color-bar {
+			background-color: @self-improvement;
 		}
 	}
 
@@ -60,8 +75,11 @@
 		.caption {
 			background-color:  @bkcolor2;
 			h4 {
-				color: @textcolor2;
+				color: @professional;
 			}
+		}
+		.color-bar {
+			background-color: @professional;
 		}
 	}
 
@@ -69,8 +87,11 @@
 		.caption {
 			background-color:  @bkcolor3;
 			h4 {
-				color: @textcolor3;
+				color: @entertainment;
 			}
+		}
+		.color-bar {
+			background-color: @entertainment;
 		}
 	}
 
@@ -78,8 +99,11 @@
 		.caption {
 			background-color:  @bkcolor4;
 			h4 {
-				color: @textcolor4;
+				color: @outdoors;
 			}
+		}
+		.color-bar {
+			background-color: @outdoors;
 		}
 	}
 

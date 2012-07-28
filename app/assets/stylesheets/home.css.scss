@@ -4,63 +4,63 @@
 
 .home-controller {
 
-	.message-panel {
-		text-align: center;
-		font-size: 1.3em;
-		line-height: 1;
-		padding: 14px 10px 15px 10px;
-	} // message-panel
+  .message-panel {
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1;
+    padding: 14px 10px 15px 10px;
+  } // message-panel
 
-	.main-panel {
-		box-shadow: 0 -2px 5px 0 #000000;
-	
-		.title {
-			font-size: 650%;
-			line-height: 1;
-			text-align: center;
-		}
-		.sub-title {
-			font-size:140%;
-			text-align: center;
-		}
-		.call-to-action {
-			margin-top: 50px;
-			text-align: center;
-		}
-	
-		/* Landscape phones and down */
-		@media (max-width: 480px) {
-		}
+  .main-panel {
+    box-shadow: 0 -2px 5px 0 #000000;
 
-		/* Landscape phone to portrait tablet */
-		@media (max-width: 767px) {
-			.vertically-centrilize{
-				margin-top: 20px;
-				margin-bottom: 20px;
-			}
-		}
+    .title {
+      font-size: 650%;
+      line-height: 1;
+      text-align: center;
+    }
+    .sub-title {
+      font-size:140%;
+      text-align: center;
+    }
+    .call-to-action {
+      margin-top: 50px;
+      text-align: center;
+    }
 
-		/* Portrait tablet to landscape and desktop */
-		@media (min-width: 768px) {
-			background: url('atlanta-cropped.jpg') no-repeat fixed 0 0 #2F2F2F;
-			.vertically-centrilize{
-				margin-top: 170px;
-				margin-bottom: 170px;
-			}
-		}
+    /* Landscape phones and down */
+    @media (max-width: 480px) {
+    }
 
-	} // main-panel
-	
-	.divider {
-		height: 4px;
-		background-color: #0055CC;
-	}
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) {
+      .vertically-centrilize{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
 
-	.lower-panel {
-		margin-top: 20px;
-		margin-top: 40px;
-	} // lower-panel
-	
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) {
+      background: url('atlanta-cropped.jpg') no-repeat 0 0 #2F2F2F;
+      .vertically-centrilize{
+        margin-top: 170px;
+        margin-bottom: 170px;
+      }
+    }
+
+  } // main-panel
+
+  .divider {
+    height: 4px;
+    background-color: #0055CC;
+  }
+
+  .lower-panel {
+    margin-top: 20px;
+    margin-top: 40px;
+  } // lower-panel
+
 }
 
 

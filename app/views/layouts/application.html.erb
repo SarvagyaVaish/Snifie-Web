@@ -18,21 +18,21 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag '/favicon.ico?1', :rel => 'shortcut icon' %>
   </head>
-  
+
   <% controller_name = params[:controller] %>
-  
+
   <body class='<%= "#{controller_name}-controller" %>'>
-	
-		<div class="container">
-		
-		  <div class="row">
-		    <%= yield %>
-		  </div><!--/row-->
 
-		  <footer>
-		  </footer>
+    <div class="container">
 
-		</div> <!-- /container -->
+      <div class="row">
+        <%= yield %>
+      </div><!--/row-->
+
+      <footer>
+      </footer>
+
+    </div> <!-- /container -->
 
     <!-- Javascripts
     ================================================== -->
@@ -41,14 +41,14 @@
 
 
     <!-- USER VOICE WIDGET -->
-		<script type="text/javascript">
-			var uvOptions = {};
-			(function() {
-				var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-				uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/IJFbvJaqVFPW8yVzPOiXQ.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-			})();
-		</script>
+    <script type="text/javascript">
+      var uvOptions = {};
+      (function() {
+        var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+        uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/IJFbvJaqVFPW8yVzPOiXQ.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+      })();
+      </script>
 
   </body>
 </html>

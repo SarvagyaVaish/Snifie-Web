@@ -1,58 +1,63 @@
-<div class="span3">
+<div class="add-top-margin">
 
-  <div class="row">
-    <div class="span3">
-      <div class="sidebar-title">snifie</div>
-    </div>
-  </div>  
+	<div class="span3">
 
-  <div class="row">
-    <div class="span3">
-      <div class="sidebar-sub-title">Event Search Simplified</div>
-    </div>        
-  </div>  
+	  <div class="row">
+		<div class="span3">
+		  <div class="sidebar-title jumbotron">snifie</div>
+		</div>
+	  </div>  
 
-  <div class="row">
-    <div class="span3 sidebar-nav">
+	  <div class="row">
+		<div class="span3">
+		  <div class="sidebar-sub-title jumbotron">Event Search Simplified</div>
+		</div>        
+	  </div>  
 
-      <div class="well">
-        <ul class="nav nav-pills nav-stacked sidebar-nav-links">
-          <li class="nav-header">Category Filter</li>
-          <li><%= link_to "All Categories", "#", :id => "all-filter", :class => "filter-btn" %></li>
-          <li><%= link_to "Entertainment", "#", :id => "entertainment-filter", :class => "filter-btn" %></li>
-          <li><%= link_to "Professional", "#", :id => "professional-filter", :class => "filter-btn" %></li>
-          <li><%= link_to "Outdoors", "#", :id => "outdoors-filter", :class => "filter-btn" %></li>
-        </ul>
-      </div>
+	  <div class="row">
+		<div class="span3 sidebar-nav">
 
-    </div>
-  </div>
+		  <div class="well">
+		    <ul class="nav nav-pills nav-stacked sidebar-nav-links">
+		      <li class="nav-header">Category Filter</li>
+		      <li><%= link_to "All Categories", "#", :id => "all-filter", :class => "filter-btn" %></li>
+		      <li><%= link_to "Entertainment", "#", :id => "entertainment-filter", :class => "filter-btn" %></li>
+		      <li><%= link_to "Professional", "#", :id => "professional-filter", :class => "filter-btn" %></li>
+		      <li><%= link_to "Outdoors", "#", :id => "outdoors-filter", :class => "filter-btn" %></li>
+		    </ul>
+		  </div>
 
-</div>
+		</div>
+	  </div>
+
+	</div>
 
 
 
-<div class="span9">
+	<div class="span9">
 
-  <ul class="thumbnails">
-    <% @events.each do |event| %>
-      <% eventCategory = event.categories.first.name.gsub(/ /, '').underscore.dasherize %>
+	  <ul class="thumbnails">
+		<% @events.each do |event| %>
+		  <% eventCategory = event.categories.first.name.gsub(/ /, '').underscore.dasherize %>
 
-      <li class="span3 <%=eventCategory%>-span all-span">
-      <%= link_to(event_path(event)) do %>
+		  <li class="span3 <%=eventCategory%>-span all-span">
+		  <%= link_to(event_path(event)) do %>
 
-        <div class="thumbnail <%= eventCategory %>">
-          <%= image_tag event.image_url(:thumb).to_s %>
-          <div class="caption">
-            <h4 class="dotify"><%= event.name %></h4>
-            <h6 class="dotify"><%= event.start_time.strftime('%a, %d @ %I:%M %p') %></h6>
-          </div>
-        </div>
+		    <div class="thumbnail <%= eventCategory %>">
+		      <%= image_tag event.image_url(:thumb).to_s %>
+		      <div class="color-bar <%= eventCategory %>" style="height: 5px; background-color: red;"></div>
+		      <div class="caption">
+		        <h4 class="dotify"><%= event.name %></h4>
+		        <h6 class="dotify"><%= event.start_time.strftime('%a, %d @ %I:%M %p') %></h6>
+		      </div>
+		    </div>
 
-      <% end %>
-      </li>
+		  <% end %>
+		  </li>
 
-    <% end %>
-  </ul>
+		<% end %>
+	  </ul>
 
+	</div>
+	
 </div>

@@ -2,84 +2,85 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.events-controller {
 
-.sidebar-title {
-	font-size: 500%;
-	line-height: 1;
-	text-align: center;
-	font-family: 'Karla', sans-serif;
-}        
-.sidebar-sub-title {
-	font-size:100%;
-	text-align: center;
-	font-family: 'Karla', sans-serif;
-}
-
-.sidebar-nav {
-	margin-top: 30px;
-}
-
-
-.thumbnail {
-	border:0px solid #DDDDDD;
-	border-radius: 4px 4px 4px 4px;
-	display: block;
-	line-height: 1;
-	padding: 0px;
-	text-align: center;
-	.caption h6{
-		color: rgb(50,50,50);
+	.sidebar-title {
+		font-size: 500%;
+		line-height: 1;
+		text-align: center;
+		font-family: 'Karla', sans-serif;
+	}        
+	.sidebar-sub-title {
+		font-size:100%;
+		text-align: center;
+		font-family: 'Karla', sans-serif;
 	}
-}
 
-a:hover {
-	text-decoration: none;
-}
+	.sidebar-nav {
+		margin-top: 30px;
+	}
 
 
-@bkcolor1: rgb(206,37,61);      // red
-@bkcolor2: rgb(158,182,62);     // green
-@bkcolor3: rgb(135,193,220);    // blue
-@bkcolor4: rgb(242,242,82);     // yellow
-
-@textcolor1: #101010;   // red
-@textcolor2: #202020;   // green
-@textcolor3: #202020;   // blue
-@textcolor4: #202020;   // yellow
-
-.thumbnail.self-improvement, .thumbnail.self-improvement:hover {
-	.caption {
-		background-color: @bkcolor1;
-		h4 {
-			color: @textcolor1;
+	.thumbnail {
+		border:0px solid #DDDDDD;
+		border-radius: 4px 4px 4px 4px;
+		display: block;
+		line-height: 1;
+		padding: 0px;
+		text-align: center;
+		.caption h6{
+			color: rgb(80,80,80);
 		}
 	}
-}
 
-.thumbnail.professional{
-	.caption {
-		background-color:  @bkcolor2;
-		h4 {
-			color: @textcolor2;
+	a:hover {
+		text-decoration: none;
+	}
+
+	@bkcolor1: rgba(0, 0, 0, 0.7);
+	@bkcolor2: rgba(0, 0, 0, 0.7);
+	@bkcolor3: rgba(0, 0, 0, 0.7);
+	@bkcolor4: rgba(0, 0, 0, 0.7);
+
+	@textcolor1: rgb(206,37,61);      // red
+	@textcolor2: rgb(158,182,62);     // green
+	@textcolor3: rgb(135,193,220);    // blue
+	@textcolor4: rgb(242,242,82);     // yellow
+
+	.thumbnail.self-improvement, .thumbnail.self-improvement:hover {
+		.caption {
+			background-color: @bkcolor1;
+			h4 {
+				color: @textcolor1;
+			}
 		}
 	}
-}
 
-.thumbnail.entertainment{
-	.caption {
-		background-color:  @bkcolor3;
-		h4 {
-			color: @textcolor3;
+	.thumbnail.professional{
+		.caption {
+			background-color:  @bkcolor2;
+			h4 {
+				color: @textcolor2;
+			}
 		}
 	}
-}
 
-.thumbnail.outdoors{
-	.caption {
-		background-color:  @bkcolor4;
-		h4 {
-			color: @textcolor4;
+	.thumbnail.entertainment{
+		.caption {
+			background-color:  @bkcolor3;
+			h4 {
+				color: @textcolor3;
+			}
 		}
 	}
-}
 
+	.thumbnail.outdoors{
+		.caption {
+			background-color:  @bkcolor4;
+			h4 {
+				color: @textcolor4;
+			}
+		}
+	}
+
+}

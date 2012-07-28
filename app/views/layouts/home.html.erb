@@ -14,32 +14,34 @@
 
     <%= stylesheet_link_tag "application", :media => "all" %>
 
-    <!-- adding google web fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
-
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag '/favicon.ico?1', :rel => 'shortcut icon' %>
   </head>
-  <body>
-
-    <div class="home-image">
-      <div class="container">
-        <div class="content">
-          <div class="row">
-            <div class="span4 jumbotron centrify">
-              <%= yield %>
-            </div>
-          </div><!--/row-->
-        </div><!--/content-->
-      </div>
-
-      <footer>
-      </footer>
-
-    </div> <!-- /container -->
+  
+  <% controller_name = params[:controller] %>
+  
+  <body class='<%= "#{controller_name}-controller" %>'>
+  
+  	<%= yield %>
 
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
+
+
+    <!-- USER VOICE WIDGET -->
+    <% if controller_name != 'home' %>
+			<script type="text/javascript">
+				var uvOptions = {};
+				(function() {
+					var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+					uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/IJFbvJaqVFPW8yVzPOiXQ.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+				})();
+			</script>
+		<% end %>
 
   </body>
 </html>

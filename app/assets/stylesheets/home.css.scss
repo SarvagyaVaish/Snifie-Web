@@ -2,43 +2,69 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.jumbotron {
-	font-family: 'Karla', sans-serif;
-	color: white;
-	.title {
-		font-size: 700%;
+.home-controller {
+
+	.message-panel {
+		text-align: center;
+		font-size: 1.3em;
 		line-height: 1;
-		text-align: center;
+		padding: 14px 10px 15px 10px;
+	} // message-panel
+
+	.main-panel {
+		box-shadow: 0 -2px 5px 0 #000000;
+	
+		.title {
+			font-size: 650%;
+			line-height: 1;
+			text-align: center;
+		}
+		.sub-title {
+			font-size:140%;
+			text-align: center;
+		}
+		.call-to-action {
+			margin-top: 50px;
+			text-align: center;
+		}
+	
+		/* Landscape phones and down */
+		@media (max-width: 480px) {
+		}
+
+		/* Landscape phone to portrait tablet */
+		@media (max-width: 767px) {
+			.vertically-centrilize{
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
+
+		/* Portrait tablet to landscape and desktop */
+		@media (min-width: 768px) {
+			background: url('atlanta-cropped.jpg') no-repeat fixed 0 0 #2F2F2F;
+			.vertically-centrilize{
+				margin-top: 170px;
+				margin-bottom: 170px;
+			}
+		}
+
+	} // main-panel
+	
+	.divider {
+		height: 4px;
+		background-color: #0055CC;
 	}
-	.sub-title {
-		font-size:150%;
-		text-align: center;
-	}
-	.call-to-action {
-		margin-top: 50px;
-		text-align: center;
-	}
+
+	.lower-panel {
+		margin-top: 20px;
+		margin-top: 40px;
+	} // lower-panel
+	
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-}
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-	.centrify{
-		margin-top: 0px;
-	}
-}
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) {
-	.home-image {
-		background: url('atlanta2.jpg') no-repeat fixed 0 -300px #000000;
-	}
-	.centrify{
-		margin-top: 170px;
-		margin-bottom: 200px;
-	}
-}
+
+
 

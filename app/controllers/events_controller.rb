@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def grid
-    @events = Event.all
+    @events = Event.where("end_time > ? or start_time > ?", Time.now.beginning_of_day, Time.now.beginning_of_day).order(:start_time)
 
     respond_to do |format|
       format.html # grid.html.erb

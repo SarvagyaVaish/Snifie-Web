@@ -6,6 +6,7 @@ SnifieWeb::Application.routes.draw do
   resources :events do
     collection do
       get 'grid'
+      post 'create_from_scrapper'
     end
   end
 

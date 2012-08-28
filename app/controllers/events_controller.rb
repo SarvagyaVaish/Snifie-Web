@@ -66,6 +66,28 @@ class EventsController < ApplicationController
     end
   end
 
+  # POST /events/create_from_scrapper
+  # POST /events/create_from_scrapper.json
+  def create_from_scrapper
+    @event = Event.new(params[:event])
+    @event.categories << Category.find_by_name(params[:category][:name])
+    @venue = Venue.find_by_name(params[:venue][:name])
+    if @venue.nil?
+      @venue = Venue.create(params[:venue])
+    end
+    @event.venue_id = @venue.id
+
+    respond_to do |format|
+      if @event.save
+        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.json { render json: @event, status: :created, location: @event }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # PUT /events/1
   # PUT /events/1.json
   def update
